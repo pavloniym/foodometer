@@ -1,0 +1,20 @@
+{
+  "name": "foodometer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index --presets=env"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "config": "^1.30.0",
+    "moment": "^2.21.0",
+    "node-telegram-bot-api": "^0.30.0",
+    "sequelize": "^4.35.1",
+    "sqlite3": "^3.1.13"
+  }
+}
