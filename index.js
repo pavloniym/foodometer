@@ -1,7 +1,7 @@
 import config from 'config'
 import moment from 'moment'
 import Telegram from 'node-telegram-bot-api'
-import DB from './db'
+import DB from './helpers/db'
 
 
 const TOKEN = config.get('token');
@@ -9,11 +9,23 @@ const port = config.get('port');
 const hook = config.get('hook');
 
 
+/*
+ * Init telegram bot
+ */
 const bot = new Telegram(TOKEN, {webHook: {port}});
+
+/*
+ * Set webhook
+ */
 bot.setWebHook(`${hook}/bot${TOKEN}`);
 
 
+
+/*
+ * Init database and models
+ */
 DB.init();
+
 
 
 /**

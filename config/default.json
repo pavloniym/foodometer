@@ -1,0 +1,6 @@
+{
+  "port": 80,
+  "hook": null,
+  "token": null,
+  "db": "foodometer"
+}

@@ -130,6 +130,6 @@ fabric.properties
 
 # End of https://www.gitignore.io/api/node,webstorm
 
-foodometer.db
+db/*
 .idea
 yarn.lock

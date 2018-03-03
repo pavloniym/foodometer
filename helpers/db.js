@@ -13,8 +13,7 @@ const db = config.get('db');
 /*
  * Store models
  */
-let models = { Members: null, Meals: null, MealsMembers: null};
-
+let models = {Members: null, Meals: null, MealsMembers: null};
 
 
 /**
@@ -35,7 +34,7 @@ const init = async () => {
         username: null,
         password: null,
         dialect: 'sqlite',
-        storage: `${db}.db`
+        storage: resolve(`/db/${db}.db`)
     });
 
 
@@ -69,4 +68,4 @@ const init = async () => {
 };
 
 
-export default { init, models };
+export default {init, models};
