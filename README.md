@@ -18,9 +18,13 @@ To run your own foodometer you should follow next steps:
 
 > You will need SSL certificate on your host machine to set telegram's webhook
 
-To work with foodometer you should create a group and invite your foodometer bot there. Bot will register group creator as participant. Any other invited users will be registered as participants too.  
-Sending `/meal` command will create new meal instance with list of group participants.  
-**Chose eaters, get payer and confirm meal!**
+To work with foodometer you should create a group and invite **only** your foodometer bot there. Bot will register group creator as participant. Any other invited users will be registered as participants too.  
+
+### Commands  
+`/meal` - create new meal instance with list of group participants. Chose eaters, get payer and confirm meal!  
+`/clear` - remove all previous meals and start from clean sheet  
+
+![Foodometer](https://raw.githubusercontent.com/PavelShar/Foodometer/assets/foodometer_screen.png)
 
 ### Docker container
 Docker container is built on top of [Chloe image](https://github.com/PavelShar/Chloe) - so you can login into foodometer's container via SSH and `SSH_PASSWORD` environment variable is also included.
