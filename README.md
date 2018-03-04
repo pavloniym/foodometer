@@ -35,4 +35,6 @@ docker run --name foodometer -d -p 8880:80 -e WEB_HOOK=<your_web_hook> -e BOT_TO
 
 > Be accurate with port mappings your internal `8880` should be mapped with your external `WEB_HOOK` 
 
+*Thanks [messagesstickers.com](http://messagesstickers.com/) for foodometer sticker*  
+
 [hub]: https://hub.docker.com/r/pavelshar/foodometer/
