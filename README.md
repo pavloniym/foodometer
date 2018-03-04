@@ -20,7 +20,6 @@ To run your own foodometer you should follow next steps:
 
 To work with foodometer you should create a group and invite **only** your foodometer bot there. Bot will register group creator as participant. Any other invited users will be registered as participants too.  
 
-### Commands  
 `/meal` - create new meal instance with list of group participants. Chose eaters, get payer and confirm meal!  
 `/clear` - remove all previous meals and start from clean sheet  
 
