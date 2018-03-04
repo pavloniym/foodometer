@@ -25,15 +25,13 @@ Sending `/meal` command will create new meal instance with list of group partici
 ### Docker container
 Docker container is built on top of [Chloe image](https://github.com/PavelShar/Chloe) - so you can login into foodometer's container via SSH and `SSH_PASSWORD` environment variable is also included.
 
+To run foodometer bot all you need is to execute this command:
 ```
-docker run --name foodometer -d -p 8880:80 -p 8822:22 \ 
--e WEB_HOOK=<your_web_hook> \
--e BOT_TOKEN=<your_bot_token> \
-pavelshar/foodometer:latest
+docker run --name foodometer -d -p 8880:80 -e WEB_HOOK=<your_web_hook> -e BOT_TOKEN=<your_bot_token> pavelshar/foodometer:latest
 ```
+`BOT_TOKEN` - obtained token from [@BotFather](https://telegram.me/BotFather)
+`WEB_HOOK` - external https hook for server interaction
 
-
-
-
+> Be accurate with port mappings your internal 8880 should be mapped with your external `WEB_HOOK` 
 
 [hub]: https://hub.docker.com/r/pavelshar/foodometer/
