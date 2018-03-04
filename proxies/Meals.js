@@ -65,6 +65,19 @@ export default class Meals {
     };
 
 
+
+    /**
+     * Clear all meals from chat
+     * @param chats_id
+     * @returns {Promise<Array<Model>>}
+     */
+    async clear({chats_id}) {
+        return this.model.destroy({
+            where: {chats_id}
+        });
+    }
+
+
     /**
      * Update payer
      * @param meals_id

@@ -12,6 +12,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "config": "^1.30.0",
+    "lodash": "^4.17.5",
     "moment": "^2.21.0",
     "node-telegram-bot-api": "^0.30.0",
     "sequelize": "^4.35.1",

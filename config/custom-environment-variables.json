@@ -1,4 +1,5 @@
 {
   "hook": "WEB_HOOK",
-  "token": "BOT_TOKEN"
+  "token": "BOT_TOKEN",
+  "local": "LOCALE"
 }
