@@ -344,7 +344,7 @@ async function createMealText(meal) {
      */
     let text = "<b>Процесс поглощения еды закончен!</b>\n" +
         "Дата: <b>" + moment(meal.createdAt).format('DD.MM.YYYY HH:mm') + "</b> \n\n" +
-        "Список едаков:";
+        "Список едоков:";
 
 
     /*
