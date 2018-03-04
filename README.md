@@ -3,7 +3,7 @@ Have business lunch with your colleagues, and the boss doesn't pay your meals' b
 So you pay lunch bills in turn and are tired of keeping the order of payment in mind.  
 Ask Foodometer **who pays today**!
 
-![Foodometer](../assets/foodometer_logo.png?raw=true)
+![Foodometer](https://raw.githubusercontent.com/PavelShar/Foodometer/assets/foodometer_logo.png)
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/pavelshar/foodometer.svg?style=flat-square)][hub]
 [![Docker Stars](https://img.shields.io/docker/stars/pavelshar/foodometer.svg?style=flat-square)][hub]
