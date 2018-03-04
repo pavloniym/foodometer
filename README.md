@@ -28,10 +28,11 @@ Docker container is built on top of [Chloe image](https://github.com/PavelShar/C
 To run foodometer bot all you need is to execute this command:
 
 ```
-docker run --name foodometer -d -p 8880:80 -e WEB_HOOK=<your_web_hook> -e BOT_TOKEN=<your_bot_token> pavelshar/foodometer:latest
+docker run --name foodometer -d -p 8880:80 -e WEB_HOOK=<your_web_hook> -e BOT_TOKEN=<your_bot_token> -e LOCALE=en pavelshar/foodometer:latest
 ```
 `BOT_TOKEN` - obtained token from [@BotFather](https://telegram.me/BotFather)  
-`WEB_HOOK` - external https hook for server interaction
+`WEB_HOOK` - external https hook for server interaction  
+`LOCALE` - bot locale - `en` and `ru` are supported
 
 > Be accurate with port mappings: your internal `8880` should be mapped with your external `WEB_HOOK` 
 
