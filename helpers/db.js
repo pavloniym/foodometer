@@ -9,7 +9,6 @@ import MealsMembers from '../proxies/MealsMembers'
 
 const db = config.get('db');
 
-
 /*
  * Store models
  */
@@ -27,14 +26,17 @@ const resolve = (dir) => path.join(__dirname, '..', dir);
 /**
  * Create connection to database
  */
-const init = async () => {
+const init = async (database = null, logging = true) => {
 
+    const db = database || db;
     const sequelize = new Sequelize({
         database: db,
         username: null,
         password: null,
         dialect: 'sqlite',
-        storage: resolve(`/db/${db}.db`)
+        storage: resolve(`/db/${db}.db`),
+        operatorsAliases: Sequelize.Op,
+        logging
     });
 
 
