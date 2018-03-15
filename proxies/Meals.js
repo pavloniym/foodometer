@@ -98,10 +98,10 @@ export default class Meals {
             m.payers_id
             
             from meals as m
-            inner join meals_members as mm on m.id = mm.meals_id
+            inner join meals_members as mm on m.id = mm.meals_id and mm.members_id IN (:eaters)
             inner join members as me on me.id = mm.members_id
             
-            where me.id IN (:eaters) and m.id != :meals_id and m.confirmed = 1
+            where m.id != :meals_id and m.confirmed = 1
             group by m.id
             
             having eaters = :eaters_number
