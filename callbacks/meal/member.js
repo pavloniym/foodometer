@@ -11,7 +11,7 @@ export default async (DB, bot, {callback, chats_id, messages_id}) => {
     /*
      * Update meal's payer
      */
-    await DB.models.Meals.payer({meals_id: callback.meals_id});
+    await DB.models.Meals.payer({meals_id: callback.meals_id, chats_id});
 
 
     /*

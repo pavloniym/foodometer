@@ -81,9 +81,10 @@ export default class Meals {
     /**
      * Update payer
      * @param meals_id
+     * @param chats_id
      * @returns {Promise<*>}
      */
-    async payer({meals_id}) {
+    async payer({meals_id, chats_id}) {
 
 
         const meal = await this.get({meals_id});
@@ -98,17 +99,16 @@ export default class Meals {
             m.payers_id
             
             from meals as m
-            inner join meals_members as mm on m.id = mm.meals_id and mm.members_id IN (:eaters)
-            inner join members as me on me.id = mm.members_id
+            inner join meals_members as mm on m.id = mm.meals_id
             
-            where m.id != :meals_id and m.confirmed = 1
+            where m.id != :meals_id and m.confirmed = 1 and m.chats_id = :chats_id
             group by m.id
-            
-            having eaters = :eaters_number
+            HAVING (SUM(mm.members_id NOT IN (:eaters)) = 0 AND SUM(mm.members_id IN (:eaters)) = :eaters_number)
             order by m.createdAt desc
             limit :meals_limit`,
             {
                 replacements: {
+                    chats_id,
                     eaters: eaters,
                     meals_id: meal.id,
                     eaters_number: eaters.length,
